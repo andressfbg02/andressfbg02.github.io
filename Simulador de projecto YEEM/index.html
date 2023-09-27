@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="icon" href="logo.ico" type="image/png">
+    <title>Registro de Personas Diabéticas</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+</head>
+<body>
+
+
+    <div class="container">
+        <h1>Registro de Personas Diabeticas</h1>
+        <form id="registro-form">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" required><br>
+            
+            <label for="edad">Edad desde el inicio de la diabetes:</label>
+            <input type="month" id="edad" required><br>
+            
+            <label for="tipo-diabetes">Tipo de Diabetes:</label>
+            <select id="tipo-diabetes">
+                <option value="Tipo 1">Tipo 1</option>
+                <option value="Tipo 2">Tipo 2</option>
+            </select><br>
+            
+            <label for="tipo-insulina">Tipo de Insulina:</label>
+            <input type="text" id="tipo-insulina" required><br>
+            
+            <label for="accion-lenta">Accion Lenta:</label>
+            <input type="text" id="accion-lenta" required><br>
+            
+            <label for="accion-rapida">Accion Rapida:</label>
+            <input type="text" id="accion-rapida" required><br>
+            
+            <button type="button" onclick="registrarPersona()">Registrar</button>
+        </form>
+        <div id="personas-diabeticas">
+            <h2>Personas Diabeticas Registradas</h2>
+            <ul id="lista-personas"></ul>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+    <ul class="nav">
+    
+    <li><a href="info.html">Información sobre la Diabetes</a></li>
+    <li><a href="causas.html">¿Porque se da la Diabetes?</a></li>
+    <li><a href="seguimiento.html">seguimiento de Glucometría </a></li>
+</ul>
+
+</body>
+</html>
+

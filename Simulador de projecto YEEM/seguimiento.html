@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="icon" href="logo.ico" type="image/png">
+    <title>Seguimiento de Glucometría</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container tracking-container">
+        <!-- ... (código previo) ... -->
+        <h2>Registra tus Mediciones</h2>
+        <p>
+            Utiliza la siguiente tabla para registrar tus mediciones de glucosa en sangre a lo largo del día:
+        </p>
+        <table class="glucose-table">
+            <!-- ... (filas de la tabla) ... -->
+        </table>
+        <canvas id="glucoseChart" width="400" height="200"></canvas>
+
+    </div>
+
+    <script>
+        // Datos de ejemplo para el gráfico
+        var glucoseData = {
+            labels: ["08:00 AM", "10:00 AM", "12:00 PM", "02:00 PM", "04:00 PM"],
+            datasets: [{
+                label: "Nivel de Glucosa (mg/dL)",
+                data: [120, 140, 130, 160, 110],
+                backgroundColor: "rgba(75, 192, 192, 0.2)",
+                borderColor: "rgba(75, 192, 192, 1)",
+                borderWidth: 1,
+                pointRadius: 5,
+                pointHoverRadius: 7
+            }]
+        };
+
+        // Configuración del gráfico
+        var glucoseOptions = {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        };
+
+        // Crear el gráfico de seguimiento de glucosa
+        var glucoseChart = new Chart(document.getElementById("glucoseChart"), {
+            type: "line",
+            data: glucoseData,
+            options: glucoseOptions
+        });
+    </script>
+</body>
+</html>
